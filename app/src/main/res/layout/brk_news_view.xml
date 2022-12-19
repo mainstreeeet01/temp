@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mobileprogramming.viewmodel.MainViewModel" />
+
+    </data>
+
+    <LinearLayout
+        app:set_key="@{viewModel.sharedPreferenceManager.KEY_VISIBLE_NEWS}"
+        app:set_map="@{viewModel.visibleArr}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="속보"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_shape"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:text="@{viewModel.brkNewsData.content}"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</layout>

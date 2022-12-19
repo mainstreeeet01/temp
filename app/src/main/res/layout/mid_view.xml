@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mobileprogramming.viewmodel.MainViewModel" />
+
+    </data>
+
+    <LinearLayout
+        app:set_key="@{viewModel.sharedPreferenceManager.KEY_VISIBLE_WEEK}"
+        app:set_map="@{viewModel.visibleArr}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="주간 날씨"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_shape"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(3), viewModel.midTaViewData.getRnAmPm(3))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(4), viewModel.midTaViewData.getRnAmPm(4))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(5), viewModel.midTaViewData.getRnAmPm(5))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(6), viewModel.midTaViewData.getRnAmPm(6))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(7), viewModel.midTaViewData.getRnAmPm(7))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(8), viewModel.midTaViewData.getRnAmPm(8))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(9), viewModel.midTaViewData.getRnAmPm(9))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text='@{String.format("%s %s", viewModel.midLandData.item.getRn(10), viewModel.midTaViewData.getRnAmPm(10))}'
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </LinearLayout>
+</layout>

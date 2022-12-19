@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="viewModel"
+            type="com.example.mobileprogramming.viewmodel.MainViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <include
+            android:id="@+id/vgTitle"
+            layout="@layout/title_view"
+            app:viewModel="@{viewModel}" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/cur_temp_view"
+                    app:viewModel="@{viewModel}" />
+
+                <include
+                    layout="@layout/mid_view"
+                    app:viewModel="@{viewModel}" />
+
+                <include
+                    layout="@layout/dust_view"
+                    app:viewModel="@{viewModel}" />
+
+                <include
+                    layout="@layout/sun_rise_set_view"
+                    app:viewModel="@{viewModel}" />
+
+                <include
+                    layout="@layout/uv_view"
+                    app:viewModel="@{viewModel}" />
+
+                <include
+                    layout="@layout/brk_news_view"
+                    app:viewModel="@{viewModel}" />
+
+                <include
+                    android:visibility="gone"
+                    layout="@layout/weather_wrn_view"
+                    app:viewModel="@{viewModel}" />
+
+                <include
+                    layout="@layout/radar_view"
+                    app:viewModel="@{viewModel}" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
